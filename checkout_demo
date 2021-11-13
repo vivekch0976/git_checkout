@@ -8,8 +8,8 @@ pipeline{
   stages{
     stage("Git Checkout"){
       steps{
-        git branch: 'main', credentialsId: 'github', url: 'https://github.com/vivekch0976/git_checkout'
-        echo "cheching out into main"
+        git branch: 'dev', credentialsId: 'github', url: 'https://github.com/vivekch0976/git_checkout'
+        echo "cheching out into dev"
         
       }
     }
