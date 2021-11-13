@@ -1,9 +1,16 @@
 pipeline{
   agent any
+  parameters {
+        choice(name: 'VERSION', choices: ['1.1.0', '1.2.0', '1.3.0'])
+        booleanParam(name: 'executeTests', defaultValue: true, description: '')
+    }
+
   stages{
     stage("Git Checkout"){
       steps{
         git branch: 'main', credentialsId: 'github', url: 'https://github.com/vivekch0976/git_checkout'
+        acho "cheching out into main"
+        
       }
     }
   }
