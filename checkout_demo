@@ -11,8 +11,8 @@ pipeline {
     }
     stages {
     
-        tools {
-            maven 'maven-3.8.2'
+    tools {
+        maven 'maven-3.8.2'
         }
 
         stage ("Git Clone"){
