@@ -10,6 +10,10 @@ pipeline {
         // SERVER_CREDENTIALS = credentials('GIT_HUB_CREDENTIALS')
     }
     stages {
+    
+        tools {
+            maven 'maven-3.8.2'
+        }
 
         stage ("Git Clone"){
             steps {
